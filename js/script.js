@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-    // Tabs
-    
+    // Tabs    
 	let tabs = document.querySelectorAll('.tabheader__item'),
 		tabsContent = document.querySelectorAll('.tabcontent'),
 		tabsParent = document.querySelector('.tabheader__items');
@@ -40,7 +39,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
     
     // Timer
-
     const deadline = '2020-05-11';
 
     function getTimeRemaining(endtime) {
@@ -95,7 +93,6 @@ window.addEventListener('DOMContentLoaded', function() {
     setClock('.timer', deadline);
 
     // Modal
-
     const modalTrigger = document.querySelectorAll('[data-modal]'),
         modal = document.querySelector('.modal');
 
@@ -129,7 +126,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     const modalTimerId = setTimeout(openModal, 300000);
-    // Изменил значение, чтобы не отвлекало
 
     function showModalByScroll() {
         if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
@@ -138,8 +134,6 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     }
     window.addEventListener('scroll', showModalByScroll);
-
-    // Используем классы для создание карточек меню
 
     class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector, ...classes) {
@@ -210,7 +204,6 @@ window.addEventListener('DOMContentLoaded', function() {
     ).render();
 
     // Forms
-
     const forms = document.querySelectorAll('form');
     const message = {
         loading: 'img/form/spinner.svg',
@@ -281,4 +274,9 @@ window.addEventListener('DOMContentLoaded', function() {
             closeModal();
         }, 4000);
     }
+
+    fetch('db.json')
+        .then(data => data.json())
+        .then(res => console.log(res));
+        
 });

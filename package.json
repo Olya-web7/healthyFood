@@ -16,6 +16,11 @@
   },
   "homepage": "https://github.com/Olya-web7/healthyFood#readme",
   "devDependencies": {
-    "json-server": "^0.16.3"
-  }
+    "json-server": "^0.16.3",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "description": ""
 }
